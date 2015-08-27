@@ -1,0 +1,10 @@
+<template name="shoeList">
+	{{> shoeDonationMarket}}
+	<div class="row">
+		{{#each shoes}}
+		<div class="col-sm-6">
+			{{> shoeItem}}
+		</div>
+		{{/each}}
+	</div>
+</template>

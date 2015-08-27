@@ -1,0 +1,24 @@
+<template name="requestShoeItem">
+	<div class="panel {{shoeDonationStatePanel state}}">
+		<div class="panel-heading">
+			<div class="h3">{{type}}</div>
+		</div>
+		<div class="panel-body">
+			<h4>Size {{size}}</h4>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				<i class="{{checkedGlyph toeStilts}}"></i> Toe Stilts
+			</li>
+			<li class="list-group-item">
+				<i class="{{checkedGlyph pfs}}"></i> Plantar Flexion
+			</li>
+			<li class="list-group-item">
+				{{barTypeText barType}}
+			</li>
+			<li class="list-group-item">
+				Donated by {{owner}} on {{formatDate submitted}}
+			</li>
+		</ul>
+	</div>
+</template>

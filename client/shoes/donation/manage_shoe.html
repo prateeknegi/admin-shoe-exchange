@@ -1,0 +1,41 @@
+<template name="manageShoe">
+	<h1>Manage Your Donation</h1>
+	<div class="panel {{shoeDonationStatePanel state}}">
+		<div class="panel-heading">
+			<div class="h3">{{type}}</div>
+		</div>
+		<div class="panel-body">
+			<h4>Size {{size}}</h4>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				<i class="{{checkedGlyph toeStilts}}"></i> Toe Stilts
+			</li>
+			<li class="list-group-item">
+				<i class="{{checkedGlyph pfs}}"></i> Plantar Flexion
+			</li>
+			<li class="list-group-item">
+				{{barTypeText barType}}
+			</li>
+			<li class="list-group-item">
+				Submitted on {{formatDate submitted}}
+			</li>
+		</ul>
+		<div class="panel-footer">
+			{{#unless isClosed}}
+				<button class="btn btn-danger deleteDonation">Delete</button>
+			{{/unless}}
+			{{#if isPending}}
+				<button class="btn btn-warning closeDonation">Fulfill Donation</button>
+			{{/if}}
+		</div>
+	</div>
+	<h2>Current Requests for the Donation</h2>
+	<div class="panel panel-grey">
+      	{{#each requests}}
+      		<ul class="list-group list-group-flush">
+      			{{> requestItem}}
+        	</ul>
+      	{{/each}}
+	</div>
+</template>

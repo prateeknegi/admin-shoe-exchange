@@ -1,0 +1,102 @@
+<template name="editRequest">
+	<h1 class="col-sm-12">Update Your Request for the Shoe</h1>
+	<div class="col-sm-12">
+ 		{{> requestShoeItem}}
+ 	</div>
+		 <h3 class="col-sm-10">Shoe Request Form</h3>
+		 <div class="lead col-sm-12">
+			Please provide the information to be added to the request list. Only City and State will be shared with the donor initially.
+		</div>
+	  	<form class="form-horizontal" role="form" data-toggle="validator">
+	  	<div class="form-group">
+	 		<label for="message" class="col-sm-2 control-label">Message</label>
+	 		<div class="col-sm-4">
+		 		<textarea name="message" class="form-control" value="{{request.message}}" 
+		 		          placeholder="Enter your message for the donor" required="true"></textarea>
+			</div>
+	 	</div>
+	 	<div class="form-group">
+		 	<label for="addressLine1" class="col-sm-2 control-label" >Address</label>
+		 	<div class="col-sm-4">
+		 		<input type="text" name="addressLine1" value="{{request.addressLine1}}" 
+		 		       placeholder="Enter your street address" class="form-control" 
+		 		       required="true"/>
+			</div>
+	 	</div>
+	 	<div class="form-group">
+		 	<label for="city" class="col-sm-2 control-label">City</label>
+		 	<div class="col-sm-4">
+		 		<input type="text" name="city" value="{{request.city}}"  
+		 		       class="form-control" placeholder="Enter your city" required="true"/>
+			</div>
+	 	</div>
+	 	<div class="form-group">
+		 	<label for="postalState" class="col-sm-2 control-label">State</label>
+		 	<div class="col-sm-4">
+		 		<select name="postalState" class="form-control" placeholder="Enter your state" required="true">
+		 			<option value="AL" {{checkedIf request.postalState 'AL'}}>Alabama</option>
+					<option value="AK" {{checkedIf request.postalState 'AK'}}>Alaska</option>
+					<option value="AZ" {{checkedIf request.postalState 'AZ'}}>Arizona</option>
+					<option value="AR" {{checkedIf request.postalState 'AR'}}>Arkansas</option>
+					<option value="CA" {{checkedIf request.postalState 'CA'}}>California</option>
+					<option value="CO" {{checkedIf request.postalState 'CO'}}>Colorado</option>
+					<option value="CT" {{checkedIf request.postalState 'CT'}}>Connecticut</option>
+					<option value="DE" {{checkedIf request.postalState 'DE'}}>Delaware</option>
+					<option value="DC" {{checkedIf request.postalState 'DC'}}>District Of Columbia</option>
+					<option value="FL" {{checkedIf request.postalState 'FL'}}>Florida</option>
+					<option value="GA" {{checkedIf request.postalState 'GA'}}>Georgia</option>
+					<option value="HI" {{checkedIf request.postalState 'HI'}}>Hawaii</option>
+					<option value="ID" {{checkedIf request.postalState 'ID'}}>Idaho</option>
+					<option value="IL" {{checkedIf request.postalState 'IL'}}>Illinois</option>
+					<option value="IN" {{checkedIf request.postalState 'IN'}}>Indiana</option>
+					<option value="IA" {{checkedIf request.postalState 'IA'}}>Iowa</option>
+					<option value="KS" {{checkedIf request.postalState 'KS'}}>Kansas</option>
+					<option value="KY" {{checkedIf request.postalState 'KY'}}>Kentucky</option>
+					<option value="LA" {{checkedIf request.postalState 'LA'}}>Louisiana</option>
+					<option value="ME" {{checkedIf request.postalState 'ME'}}>Maine</option>
+					<option value="MD" {{checkedIf request.postalState 'MD'}}>Maryland</option>
+					<option value="MA" {{checkedIf request.postalState 'MA'}}>Massachusetts</option>
+					<option value="MI" {{checkedIf request.postalState 'MI'}}>Michigan</option>
+					<option value="MN" {{checkedIf request.postalState 'MN'}}>Minnesota</option>
+					<option value="MS" {{checkedIf request.postalState 'MS'}}>Mississippi</option>
+					<option value="MO" {{checkedIf request.postalState 'MO'}}>Missouri</option>
+					<option value="MT" {{checkedIf request.postalState 'MT'}}>Montana</option>
+					<option value="NE" {{checkedIf request.postalState 'NE'}}>Nebraska</option>
+					<option value="NV" {{checkedIf request.postalState 'NV'}}>Nevada</option>
+					<option value="NH" {{checkedIf request.postalState 'NH'}}>New Hampshire</option>
+					<option value="NJ" {{checkedIf request.postalState 'NJ'}}>New Jersey</option>
+					<option value="NM" {{checkedIf request.postalState 'NM'}}>New Mexico</option>
+					<option value="NY" {{checkedIf request.postalState 'NY'}}>New York</option>
+					<option value="NC" {{checkedIf request.postalState 'NC'}}>North Carolina</option>
+					<option value="ND" {{checkedIf request.postalState 'ND'}}>North Dakota</option>
+					<option value="OH" {{checkedIf request.postalState 'OH'}}>Ohio</option>
+					<option value="OK" {{checkedIf request.postalState 'OK'}}>Oklahoma</option>
+					<option value="OR" {{checkedIf request.postalState 'OR'}}>Oregon</option>
+					<option value="PA" {{checkedIf request.postalState 'PA'}}>Pennsylvania</option>
+					<option value="RI" {{checkedIf request.postalState 'RI'}}>Rhode Island</option>
+					<option value="SC" {{checkedIf request.postalState 'SC'}}>South Carolina</option>
+					<option value="SD" {{checkedIf request.postalState 'SD'}}>South Dakota</option>
+					<option value="TN" {{checkedIf request.postalState 'TN'}}>Tennessee</option>
+					<option value="TX" {{checkedIf request.postalState 'TX'}}>Texas</option>
+					<option value="UT" {{checkedIf request.postalState 'UT'}}>Utah</option>
+					<option value="VT" {{checkedIf request.postalState 'VT'}}>Vermont</option>
+					<option value="VA" {{checkedIf request.postalState 'VA'}}>Virginia</option>
+					<option value="WA" {{checkedIf request.postalState 'WA'}}>Washington</option>
+					<option value="WV" {{checkedIf request.postalState 'WV'}}>West Virginia</option>
+					<option value="WI" {{checkedIf request.postalState 'WI'}}>Wisconsin</option>
+					<option value="WY" {{checkedIf request.postalState 'WY'}}>Wyoming</option>
+		 		</select>
+			</div>
+		</div>
+		<div class="form-group">
+	 		<label for="zipcode" class="col-sm-2 control-label" >Zip Code</label>
+	 		<div class="col-sm-4">
+	 			<input type="number" name="zipcode" value="{{request.zipcode}}" 
+	 			       class="form-control" placeholder="Enter your zip code" required="true"/>
+			</div>
+		</div>
+	  	<div class="col-sm-offset-2 col-sm-4">
+	   		<input type="submit" value="Update Request" class="request btn btn-primary"/>
+		</div>
+	  </form>
+</template>
