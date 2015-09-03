@@ -5,7 +5,7 @@ Template.userRow.helpers({
 	}, 
 	isAdmin: function(){
 		var user = this;
-		var admin = (!user.profile) ? false: !!user.profile.admin;
+		return (!user.profile) ? false: !!user.profile.admin;
 	}, 
 	email: function(){
 		var user = this;
