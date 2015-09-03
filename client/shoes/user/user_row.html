@@ -1,0 +1,12 @@
+<template name="userRow">
+<tr>
+	<td>{{username}}  :  {{email}}</td>
+	<td>
+		{{#if isAdmin}}
+			<input type="submit" value="Revoke Access" class="revoke btn btn-primary"/>
+		{{else}}
+			<input type="submit" value="Allow Access" class="allow btn btn-primary"/>
+		{{/if}}
+	</td>
+</tr>
+</template>

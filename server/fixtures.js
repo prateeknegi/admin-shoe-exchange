@@ -1,11 +1,12 @@
 if(Shoes.find().count() === 0 ){
-	// var now = new Date().getTime();
+	var now = new Date().getTime();
 
-	// var user1_id = Meteor.users.insert({
-	// 	profile: {
-	// 		name: 'User 1'
-	// 	}
-	// });
+	var admin_id = Meteor.users.insert({
+		profile: {
+			name: 'admin',
+			admin: true
+		}
+	});
 
 	// var user1 = Meteor.users.findOne(user1_id);
 

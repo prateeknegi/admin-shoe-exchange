@@ -1,0 +1,8 @@
+<template name="manageUser">
+<table class="table table-striped">
+	<tr class="tr"><th>User Name</th><th>Admin</th></tr>
+	{{#each users}}
+		{{> userRow}}
+	{{/each}}
+</table>
+</template>

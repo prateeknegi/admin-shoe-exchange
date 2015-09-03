@@ -21,3 +21,6 @@ Meteor.publish('requestsByShoe', function(shoeId){
 Meteor.publish('requestsByUser', function(requesterId){
 	return Requests.find({requesterId: requesterId});
 });
+Meteor.publish('allusers', function(){
+	return Meteor.users.find();
+})
